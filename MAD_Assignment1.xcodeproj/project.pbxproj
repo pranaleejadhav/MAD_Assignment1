@@ -15,6 +15,9 @@
 		9CA65165213460810052FD76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA65163213460810052FD76 /* LaunchScreen.storyboard */; };
 		9CA65170213460820052FD76 /* MAD_Assignment1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6516F213460820052FD76 /* MAD_Assignment1Tests.swift */; };
 		9CA6517B213460820052FD76 /* MAD_Assignment1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6517A213460820052FD76 /* MAD_Assignment1UITests.swift */; };
+		AE0A4938D11DD6B6078A973C /* Pods_MAD_Assignment1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895F25D58AEC67D29949637A /* Pods_MAD_Assignment1.framework */; };
+		B81047C0C035C109395F70EC /* Pods_MAD_Assignment1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D07E399D51A007FE65EA47 /* Pods_MAD_Assignment1UITests.framework */; };
+		F7601236C69A534F6D983D64 /* Pods_MAD_Assignment1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07059BF1E4424213C9691A41 /* Pods_MAD_Assignment1Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07059BF1E4424213C9691A41 /* Pods_MAD_Assignment1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAD_Assignment1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D07E399D51A007FE65EA47 /* Pods_MAD_Assignment1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAD_Assignment1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E9F5630A91F258E2AFD3161 /* Pods-MAD_Assignment1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAD_Assignment1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAD_Assignment1/Pods-MAD_Assignment1.debug.xcconfig"; sourceTree = "<group>"; };
+		895F25D58AEC67D29949637A /* Pods_MAD_Assignment1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAD_Assignment1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5B05EDE00F50F9ED189E6C /* Pods-MAD_Assignment1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAD_Assignment1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAD_Assignment1UITests/Pods-MAD_Assignment1UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B2DF5BC38C9EAF0DF1B4084 /* Pods-MAD_Assignment1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAD_Assignment1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAD_Assignment1Tests/Pods-MAD_Assignment1Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B735DA52498FBCDE113D47F /* Pods-MAD_Assignment1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAD_Assignment1.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAD_Assignment1/Pods-MAD_Assignment1.release.xcconfig"; sourceTree = "<group>"; };
 		9CA65154213460810052FD76 /* MAD_Assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAD_Assignment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA65157213460810052FD76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CA65159213460810052FD76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		9CA65176213460820052FD76 /* MAD_Assignment1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MAD_Assignment1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA6517A213460820052FD76 /* MAD_Assignment1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAD_Assignment1UITests.swift; sourceTree = "<group>"; };
 		9CA6517C213460820052FD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC0E11346F60BCF34236550 /* Pods-MAD_Assignment1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAD_Assignment1UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAD_Assignment1UITests/Pods-MAD_Assignment1UITests.release.xcconfig"; sourceTree = "<group>"; };
+		DC052DC51BE39AECBBE2FA23 /* Pods-MAD_Assignment1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAD_Assignment1Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAD_Assignment1Tests/Pods-MAD_Assignment1Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0A4938D11DD6B6078A973C /* Pods_MAD_Assignment1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7601236C69A534F6D983D64 /* Pods_MAD_Assignment1Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81047C0C035C109395F70EC /* Pods_MAD_Assignment1UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2812722D7AC6CC6AE695C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E9F5630A91F258E2AFD3161 /* Pods-MAD_Assignment1.debug.xcconfig */,
+				9B735DA52498FBCDE113D47F /* Pods-MAD_Assignment1.release.xcconfig */,
+				9B2DF5BC38C9EAF0DF1B4084 /* Pods-MAD_Assignment1Tests.debug.xcconfig */,
+				DC052DC51BE39AECBBE2FA23 /* Pods-MAD_Assignment1Tests.release.xcconfig */,
+				8F5B05EDE00F50F9ED189E6C /* Pods-MAD_Assignment1UITests.debug.xcconfig */,
+				BFC0E11346F60BCF34236550 /* Pods-MAD_Assignment1UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		82B46024292A013F364D0498 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				895F25D58AEC67D29949637A /* Pods_MAD_Assignment1.framework */,
+				07059BF1E4424213C9691A41 /* Pods_MAD_Assignment1Tests.framework */,
+				24D07E399D51A007FE65EA47 /* Pods_MAD_Assignment1UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9CA6514B213460810052FD76 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +121,8 @@
 				9CA6516E213460820052FD76 /* MAD_Assignment1Tests */,
 				9CA65179213460820052FD76 /* MAD_Assignment1UITests */,
 				9CA65155213460810052FD76 /* Products */,
+				1D2812722D7AC6CC6AE695C0 /* Pods */,
+				82B46024292A013F364D0498 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CA6517F213460820052FD76 /* Build configuration list for PBXNativeTarget "MAD_Assignment1" */;
 			buildPhases = (
+				7EEA4B1C9A47074D7403B37C /* [CP] Check Pods Manifest.lock */,
 				9CA65150213460810052FD76 /* Sources */,
 				9CA65151213460810052FD76 /* Frameworks */,
 				9CA65152213460810052FD76 /* Resources */,
+				515D59A5714C7989901B3DF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CA65182213460820052FD76 /* Build configuration list for PBXNativeTarget "MAD_Assignment1Tests" */;
 			buildPhases = (
+				B11CE5F4BE7B12B8F35033DE /* [CP] Check Pods Manifest.lock */,
 				9CA65167213460820052FD76 /* Sources */,
 				9CA65168213460820052FD76 /* Frameworks */,
 				9CA65169213460820052FD76 /* Resources */,
@@ -170,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CA65185213460820052FD76 /* Build configuration list for PBXNativeTarget "MAD_Assignment1UITests" */;
 			buildPhases = (
+				ADFA4C9DDFDA0368CD27953E /* [CP] Check Pods Manifest.lock */,
 				9CA65172213460820052FD76 /* Sources */,
 				9CA65173213460820052FD76 /* Frameworks */,
 				9CA65174213460820052FD76 /* Resources */,
@@ -253,6 +297,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		515D59A5714C7989901B3DF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MAD_Assignment1/Pods-MAD_Assignment1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IHKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MAD_Assignment1/Pods-MAD_Assignment1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EEA4B1C9A47074D7403B37C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MAD_Assignment1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADFA4C9DDFDA0368CD27953E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MAD_Assignment1UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B11CE5F4BE7B12B8F35033DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MAD_Assignment1Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9CA65150213460810052FD76 /* Sources */ = {
@@ -432,14 +551,12 @@
 		};
 		9CA65180213460820052FD76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E9F5630A91F258E2AFD3161 /* Pods-MAD_Assignment1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -449,14 +566,12 @@
 		};
 		9CA65181213460820052FD76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B735DA52498FBCDE113D47F /* Pods-MAD_Assignment1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -466,16 +581,13 @@
 		};
 		9CA65183213460820052FD76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B2DF5BC38C9EAF0DF1B4084 /* Pods-MAD_Assignment1Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -486,16 +598,13 @@
 		};
 		9CA65184213460820052FD76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC052DC51BE39AECBBE2FA23 /* Pods-MAD_Assignment1Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -506,15 +615,12 @@
 		};
 		9CA65186213460820052FD76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5B05EDE00F50F9ED189E6C /* Pods-MAD_Assignment1UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -525,15 +631,12 @@
 		};
 		9CA65187213460820052FD76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFC0E11346F60BCF34236550 /* Pods-MAD_Assignment1UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
