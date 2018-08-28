@@ -106,8 +106,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             statusBar.backgroundColor = UIColor.init(red: 0.1, green: 0.27, blue: 0.60, alpha: 1.0)
         }
         
-        //UserDefaults.standard.removeObject(forKey: "userid")
-        UserDefaults.standard.set("Anand", forKey: "userid")
+        UserDefaults.standard.removeObject(forKey: "userid")
+        //UserDefaults.standard.set("Anand", forKey: "userid")
         let userid = UserDefaults.standard.string(forKey: "userid")
         if userid != nil {
             let bundle = Bundle.main

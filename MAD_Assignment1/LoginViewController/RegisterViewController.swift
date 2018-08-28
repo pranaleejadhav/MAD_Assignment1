@@ -47,7 +47,9 @@ class RegisterViewController: UIViewController{
             showMsg(title: "", subTitle: "Passwords do not match")
         } else if ((age.isEmpty) == true) {
             showMsg(title: "", subTitle: "Please enter age")
-        }else if ((weight.isEmpty) == true) {
+        } else if (Int(age)! > 17) {
+            showMsg(title: "Oops!", subTitle: "Age must be atleast 18 years")
+        } else if ((weight.isEmpty) == true) {
             showMsg(title: "", subTitle: "Please enter weight")
         }else if ((address.isEmpty) == true) {
             showMsg(title: "", subTitle: "Please enter address")

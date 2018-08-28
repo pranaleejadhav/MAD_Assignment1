@@ -16,9 +16,8 @@ class HomeScreenViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        UserDefaults.standard.set("Anand", forKey: "username")
-        let uname = UserDefaults.standard.string(forKey: "username")
-        welcome_lb.text = "Welcome " + uname!
+        //UserDefaults.standard.set("Anand", forKey: "username")
+        
         
     }
     
@@ -26,8 +25,22 @@ class HomeScreenViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
+    override func viewWillAppear(_ animated: Bool) {
+        let uname = UserDefaults.standard.string(forKey: "username")
+        welcome_lb.text = "Welcome " + uname!
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     @IBAction func showProfile(_ sender: Any) {
+        let bundle = Bundle.main
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
         
+        let newViewController: ViewProfileController = storyboard.instantiateViewController(withIdentifier: "ViewProfileController") as! ViewProfileController
+        self.navigationController?.pushViewController(newViewController, animated: true)
     }
     
     @IBAction func logout(_ sender: Any) {
