@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        // Register to receive notification
+        NotificationCenter.default.addObserver(self, selector: #selector(showHomeScreen(_:)), name: Notification.Name("com.mad.showhomescreen"), object: nil)
+       
+       UIApplication.shared.statusBarStyle = .lightContent
+        
         return true
     }
 
@@ -88,6 +95,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    @objc func showHomeScreen(_ notification:Notification){
+        
+        // UINavigationBar.appearance().shadowImage = UIImage()
+        // UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        
+        if statusBar.responds(to: #selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = UIColor.init(red: 0.1, green: 0.27, blue: 0.60, alpha: 1.0)
+        }
+        
+        //UserDefaults.standard.removeObject(forKey: "userid")
+        UserDefaults.standard.set("Anand", forKey: "userid")
+        let userid = UserDefaults.standard.string(forKey: "userid")
+        if userid != nil {
+            let bundle = Bundle.main
+            let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+            
+            let viewController: HomeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
+            //let viewController = HomeScreenViewController(nibName: nil, bundle: nil) //ViewController = Name of your controller
+            let navigationController = UINavigationController(rootViewController: viewController)
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = navigationController
+            self.window?.makeKeyAndVisible()
+            
+            
+        } else {
+            let bundle = Bundle.main
+            let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+            
+            let loginViewController: LoginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = loginViewController
+            self.window?.makeKeyAndVisible()
+        }
+        
+    }
+    
 
 }
 

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1E00F721358AF200C1EA4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E00F621358AF200C1EA4C /* LoginViewController.swift */; };
+		9C1E00F921358B0500C1EA4C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E00F821358B0500C1EA4C /* RegisterViewController.swift */; };
+		9C1E00FC21358B5100C1EA4C /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E00FB21358B5100C1EA4C /* HomeScreenViewController.swift */; };
+		9C1E00FF21358BD700C1EA4C /* ViewProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E00FE21358BD700C1EA4C /* ViewProfileController.swift */; };
+		9C21AB152134B8EA00772847 /* CustomlaunchscreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21AB142134B8EA00772847 /* CustomlaunchscreenController.swift */; };
 		9CA65158213460810052FD76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA65157213460810052FD76 /* AppDelegate.swift */; };
 		9CA6515A213460810052FD76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA65159213460810052FD76 /* ViewController.swift */; };
 		9CA6515D213460810052FD76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA6515B213460810052FD76 /* Main.storyboard */; };
@@ -45,6 +50,11 @@
 		8F5B05EDE00F50F9ED189E6C /* Pods-MAD_Assignment1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAD_Assignment1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAD_Assignment1UITests/Pods-MAD_Assignment1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B2DF5BC38C9EAF0DF1B4084 /* Pods-MAD_Assignment1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAD_Assignment1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAD_Assignment1Tests/Pods-MAD_Assignment1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B735DA52498FBCDE113D47F /* Pods-MAD_Assignment1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAD_Assignment1.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAD_Assignment1/Pods-MAD_Assignment1.release.xcconfig"; sourceTree = "<group>"; };
+		9C1E00F621358AF200C1EA4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9C1E00F821358B0500C1EA4C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9C1E00FB21358B5100C1EA4C /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		9C1E00FE21358BD700C1EA4C /* ViewProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileController.swift; sourceTree = "<group>"; };
+		9C21AB142134B8EA00772847 /* CustomlaunchscreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomlaunchscreenController.swift; sourceTree = "<group>"; };
 		9CA65154213460810052FD76 /* MAD_Assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAD_Assignment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA65157213460810052FD76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CA65159213460810052FD76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +124,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C1E00F521358AD200C1EA4C /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C1E00F621358AF200C1EA4C /* LoginViewController.swift */,
+				9C1E00F821358B0500C1EA4C /* RegisterViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		9C1E00FA21358B0D00C1EA4C /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9C1E00FB21358B5100C1EA4C /* HomeScreenViewController.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		9C1E00FD21358BB300C1EA4C /* ViewProfile */ = {
+			isa = PBXGroup;
+			children = (
+				9C1E00FE21358BD700C1EA4C /* ViewProfileController.swift */,
+			);
+			path = ViewProfile;
+			sourceTree = "<group>";
+		};
+		9C21AB132134B8CD00772847 /* CustomLaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9C21AB142134B8EA00772847 /* CustomlaunchscreenController.swift */,
+			);
+			path = CustomLaunchScreen;
+			sourceTree = "<group>";
+		};
 		9CA6514B213460810052FD76 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +182,10 @@
 		9CA65156213460810052FD76 /* MAD_Assignment1 */ = {
 			isa = PBXGroup;
 			children = (
+				9C1E00FD21358BB300C1EA4C /* ViewProfile */,
+				9C1E00FA21358B0D00C1EA4C /* HomeScreen */,
+				9C1E00F521358AD200C1EA4C /* LoginViewController */,
+				9C21AB132134B8CD00772847 /* CustomLaunchScreen */,
 				9CA65157213460810052FD76 /* AppDelegate.swift */,
 				9CA65159213460810052FD76 /* ViewController.swift */,
 				9CA6515B213460810052FD76 /* Main.storyboard */,
@@ -381,6 +428,11 @@
 				9CA65160213460810052FD76 /* MAD_Assignment1.xcdatamodeld in Sources */,
 				9CA6515A213460810052FD76 /* ViewController.swift in Sources */,
 				9CA65158213460810052FD76 /* AppDelegate.swift in Sources */,
+				9C1E00F921358B0500C1EA4C /* RegisterViewController.swift in Sources */,
+				9C1E00F721358AF200C1EA4C /* LoginViewController.swift in Sources */,
+				9C21AB152134B8EA00772847 /* CustomlaunchscreenController.swift in Sources */,
+				9C1E00FF21358BD700C1EA4C /* ViewProfileController.swift in Sources */,
+				9C1E00FC21358B5100C1EA4C /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +608,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -571,7 +626,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -587,7 +645,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -604,7 +666,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -620,7 +686,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -636,7 +706,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MAD_Assignment1UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pranalee.MAD-Assignment1UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
