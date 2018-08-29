@@ -77,7 +77,7 @@
                                             <action selector="signin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIT-lF-0fq"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not yet register? Sign up" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-e2-1oe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not yet registered? Sign up" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-e2-1oe">
                                         <rect key="frame" x="20" y="288" width="222.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -257,46 +257,46 @@
                                 <rect key="frame" x="20" y="94" width="335" height="543"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yDf-30-IK1">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="596"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="445"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDK-Vy-Qex">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="64.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="45.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hoJ-qb-S7U">
-                                                <rect key="frame" x="0.0" y="79.5" width="335" height="65.5"/>
+                                                <rect key="frame" x="0.0" y="60.5" width="335" height="45"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqq-wz-bke">
-                                                <rect key="frame" x="0.0" y="160" width="335" height="64.5"/>
+                                                <rect key="frame" x="0.0" y="120.5" width="335" height="45.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLu-CS-ige">
-                                                <rect key="frame" x="0.0" y="239.5" width="335" height="65"/>
+                                                <rect key="frame" x="0.0" y="181" width="335" height="45.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9V-aV-Si2">
-                                                <rect key="frame" x="0.0" y="319.5" width="335" height="65"/>
+                                                <rect key="frame" x="0.0" y="241.5" width="335" height="46"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter your address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wH3-Y3-pik">
-                                                <rect key="frame" x="0.0" y="399.5" width="335" height="129.5"/>
+                                                <rect key="frame" x="0.0" y="302.5" width="335" height="91"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NT-fg-YIy">
-                                                <rect key="frame" x="0.0" y="544" width="335" height="52"/>
+                                                <rect key="frame" x="0.0" y="408.5" width="335" height="36.5"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -327,7 +327,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bDK-Vy-Qex" firstAttribute="height" secondItem="40K-HW-gBT" secondAttribute="height" multiplier="0.1" id="0w5-Te-7yf"/>
+                            <constraint firstItem="bDK-Vy-Qex" firstAttribute="height" secondItem="40K-HW-gBT" secondAttribute="height" multiplier="0.07" id="0w5-Te-7yf"/>
                             <constraint firstItem="XpZ-QZ-8zP" firstAttribute="leading" secondItem="40K-HW-gBT" secondAttribute="leading" constant="10" id="217-PQ-sEU"/>
                             <constraint firstItem="1w9-hJ-8fl" firstAttribute="top" secondItem="XpZ-QZ-8zP" secondAttribute="bottom" constant="30" id="Vv9-BN-7jG"/>
                             <constraint firstItem="40K-HW-gBT" firstAttribute="bottom" secondItem="1w9-hJ-8fl" secondAttribute="bottom" constant="30" id="XLH-rw-2NI"/>
@@ -457,7 +457,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter your address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jw9-9B-Eem">
-                                                        <rect key="frame" x="78" y="7" width="257" height="115.5"/>
+                                                        <rect key="frame" x="78" y="6.5" width="257" height="116.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

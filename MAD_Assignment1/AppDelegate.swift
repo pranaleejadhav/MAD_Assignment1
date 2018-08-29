@@ -98,23 +98,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @objc func showHomeScreen(_ notification:Notification){
         
-        // UINavigationBar.appearance().shadowImage = UIImage()
-        // UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        //change status bar appearance
         let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        
         if statusBar.responds(to: #selector(setter: UIView.backgroundColor)) {
-            statusBar.backgroundColor = UIColor.init(red: 0.1, green: 0.27, blue: 0.60, alpha: 1.0)
+            statusBar.backgroundColor = UIColor.init(red:0.14, green:0.32, blue:0.85, alpha:1)
         }
         
-        UserDefaults.standard.removeObject(forKey: "userid")
+        //UserDefaults.standard.removeObject(forKey: "userid")
         //UserDefaults.standard.set("Anand", forKey: "userid")
         let userid = UserDefaults.standard.string(forKey: "userid")
+        //check user is logged in or not
         if userid != nil {
+            //user is logged in, redirect to home page
             let bundle = Bundle.main
             let storyboard = UIStoryboard(name: "Main", bundle: bundle)
             
             let viewController: HomeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
-            //let viewController = HomeScreenViewController(nibName: nil, bundle: nil) //ViewController = Name of your controller
             let navigationController = UINavigationController(rootViewController: viewController)
             
             self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -123,6 +122,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             
         } else {
+            //user is not logged in, redirect to login page
+            
             let bundle = Bundle.main
             let storyboard = UIStoryboard(name: "Main", bundle: bundle)
             

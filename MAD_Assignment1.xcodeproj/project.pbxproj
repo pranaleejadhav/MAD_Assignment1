@@ -11,9 +11,11 @@
 		9C1E00F921358B0500C1EA4C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E00F821358B0500C1EA4C /* RegisterViewController.swift */; };
 		9C1E00FC21358B5100C1EA4C /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E00FB21358B5100C1EA4C /* HomeScreenViewController.swift */; };
 		9C1E00FF21358BD700C1EA4C /* ViewProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E00FE21358BD700C1EA4C /* ViewProfileController.swift */; };
+		9C1E01032135D01900C1EA4C /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E01022135D01900C1EA4C /* ServerManager.swift */; };
+		9C1E01052135D2FB00C1EA4C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1E01042135D2FB00C1EA4C /* Alamofire.framework */; };
+		9C1E01072135D42C00C1EA4C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E01062135D42C00C1EA4C /* Reachability.swift */; };
 		9C21AB152134B8EA00772847 /* CustomlaunchscreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21AB142134B8EA00772847 /* CustomlaunchscreenController.swift */; };
 		9CA65158213460810052FD76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA65157213460810052FD76 /* AppDelegate.swift */; };
-		9CA6515A213460810052FD76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA65159213460810052FD76 /* ViewController.swift */; };
 		9CA6515D213460810052FD76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA6515B213460810052FD76 /* Main.storyboard */; };
 		9CA65160213460810052FD76 /* MAD_Assignment1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6515E213460810052FD76 /* MAD_Assignment1.xcdatamodeld */; };
 		9CA65162213460810052FD76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA65161213460810052FD76 /* Assets.xcassets */; };
@@ -54,10 +56,12 @@
 		9C1E00F821358B0500C1EA4C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9C1E00FB21358B5100C1EA4C /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		9C1E00FE21358BD700C1EA4C /* ViewProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileController.swift; sourceTree = "<group>"; };
+		9C1E01022135D01900C1EA4C /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		9C1E01042135D2FB00C1EA4C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1E01062135D42C00C1EA4C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9C21AB142134B8EA00772847 /* CustomlaunchscreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomlaunchscreenController.swift; sourceTree = "<group>"; };
 		9CA65154213460810052FD76 /* MAD_Assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAD_Assignment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA65157213460810052FD76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9CA65159213460810052FD76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CA6515C213460810052FD76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CA6515F213460810052FD76 /* MAD_Assignment1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MAD_Assignment1.xcdatamodel; sourceTree = "<group>"; };
 		9CA65161213460810052FD76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1E01052135D2FB00C1EA4C /* Alamofire.framework in Frameworks */,
 				AE0A4938D11DD6B6078A973C /* Pods_MAD_Assignment1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +122,7 @@
 		82B46024292A013F364D0498 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C1E01042135D2FB00C1EA4C /* Alamofire.framework */,
 				895F25D58AEC67D29949637A /* Pods_MAD_Assignment1.framework */,
 				07059BF1E4424213C9691A41 /* Pods_MAD_Assignment1Tests.framework */,
 				24D07E399D51A007FE65EA47 /* Pods_MAD_Assignment1UITests.framework */,
@@ -187,12 +193,13 @@
 				9C1E00F521358AD200C1EA4C /* LoginViewController */,
 				9C21AB132134B8CD00772847 /* CustomLaunchScreen */,
 				9CA65157213460810052FD76 /* AppDelegate.swift */,
-				9CA65159213460810052FD76 /* ViewController.swift */,
 				9CA6515B213460810052FD76 /* Main.storyboard */,
 				9CA65161213460810052FD76 /* Assets.xcassets */,
 				9CA65163213460810052FD76 /* LaunchScreen.storyboard */,
 				9CA65166213460810052FD76 /* Info.plist */,
 				9CA6515E213460810052FD76 /* MAD_Assignment1.xcdatamodeld */,
+				9C1E01022135D01900C1EA4C /* ServerManager.swift */,
+				9C1E01062135D42C00C1EA4C /* Reachability.swift */,
 			);
 			path = MAD_Assignment1;
 			sourceTree = "<group>";
@@ -353,10 +360,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MAD_Assignment1/Pods-MAD_Assignment1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IHKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,12 +435,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CA65160213460810052FD76 /* MAD_Assignment1.xcdatamodeld in Sources */,
-				9CA6515A213460810052FD76 /* ViewController.swift in Sources */,
 				9CA65158213460810052FD76 /* AppDelegate.swift in Sources */,
 				9C1E00F921358B0500C1EA4C /* RegisterViewController.swift in Sources */,
 				9C1E00F721358AF200C1EA4C /* LoginViewController.swift in Sources */,
 				9C21AB152134B8EA00772847 /* CustomlaunchscreenController.swift in Sources */,
+				9C1E01072135D42C00C1EA4C /* Reachability.swift in Sources */,
 				9C1E00FF21358BD700C1EA4C /* ViewProfileController.swift in Sources */,
+				9C1E01032135D01900C1EA4C /* ServerManager.swift in Sources */,
 				9C1E00FC21358B5100C1EA4C /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

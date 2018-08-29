@@ -10,7 +10,10 @@ import Foundation
 import UIKit
 import IHKeyboardAvoiding
 
-class RegisterViewController: UIViewController{
+
+
+
+class RegisterViewController: UIViewController,UITextViewDelegate{
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var age: UITextField!
@@ -23,8 +26,19 @@ class RegisterViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
          KeyboardAvoiding.avoidingView = self.scrollView
+
+        //change address box text and border color
+        address.delegate = self
+        address.text = "Enter your address"
+        address.textColor = .lightGray
+        
+        address.layer.borderColor = UIColor.lightGray.cgColor
+        address.layer.borderWidth = 1.0
+        address.layer.cornerRadius = 5
+        
     }
     
+    //called when register button is clicked
     @IBAction func register(_ sender: Any) {
         let uname: String = (name.text?.trimmingCharacters(in: .whitespaces))!
         let pwd: String = (self.pwd.text?.trimmingCharacters(in: .whitespaces))!
@@ -33,6 +47,7 @@ class RegisterViewController: UIViewController{
         let weight: String = (self.weight.text?.trimmingCharacters(in: .whitespaces))!
         let address: String = (self.address.text?.trimmingCharacters(in: .whitespaces))!
         
+        //validate input values
         if ((uname.isEmpty) == true) {
             showMsg(title: "", subTitle: "Please enter username")
         } else if ((uname.count) < 5) {
@@ -65,6 +80,7 @@ class RegisterViewController: UIViewController{
         
     }
     
+    //show alert box
     func showMsg(title: String, subTitle: String) -> Void {
         let alertController = UIAlertController(title: title, message:
             subTitle, preferredStyle: UIAlertControllerStyle.alert)
@@ -73,8 +89,33 @@ class RegisterViewController: UIViewController{
         self.present(alertController, animated: true, completion: nil)
     }
    
-    
+    //Dismiss view controller
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    /**to perform operations when focus is on and out of textview **/
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if (textView.text == "Enter your address")
+        {
+            textView.text = ""
+            textView.textColor = .black
+        }
+        textView.becomeFirstResponder() //Optional
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if (textView.text == "")
+        {
+            textView.text = "Enter your address"
+            textView.textColor = .lightGray
+        }
+        textView.resignFirstResponder()
+    }
+    
+    
+    
+    
 }

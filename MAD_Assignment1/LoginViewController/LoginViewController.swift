@@ -10,6 +10,17 @@ import Foundation
 import UIKit
 import IHKeyboardAvoiding
 
+
+extension UITextField
+{
+    open override func draw(_ rect: CGRect) {
+        self.layer.cornerRadius = 3.0
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        self.layer.masksToBounds = true
+    }
+}
+
 class LoginViewController: UIViewController{
     
     @IBOutlet weak var username: UITextField!
@@ -29,6 +40,7 @@ class LoginViewController: UIViewController{
         
     }
     
+    //called when signup link is tapped
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
@@ -38,11 +50,13 @@ class LoginViewController: UIViewController{
         
     }
     
+    //called when sigin button is clicked
     @IBAction func signin(_ sender: Any) {
         
         let uname: String = (username.text?.trimmingCharacters(in: .whitespaces))!
         let pwd: String = (password.text?.trimmingCharacters(in: .whitespaces))!
         
+        //check validity of input values
         if ((uname.isEmpty) == true) {
             showMsg(title: "", subTitle: "Please enter username")
             
@@ -55,12 +69,30 @@ class LoginViewController: UIViewController{
             UserDefaults.standard.set("Anand", forKey: "userid")
             NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
 
+            /*let params = ["username": uname, "pwd": pwd]
+
+            let result : Int = post_request(url: "login", parameters: params)
             
+            switch result {
+            case 0: showMsg(title: "Oops!", subTitle: "No Internet")
+              break
+            case 2:
+                UserDefaults.standard.set(uname, forKey: "username")
+                UserDefaults.standard.set("Anand", forKey: "userid")
+                NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
+
+                break
+            default:
+                showMsg(title: "Error", subTitle: "Please try again")
+            }
+           
+         */
         }
 
         
     }
     
+    //show alertbox
     func showMsg(title: String, subTitle: String) -> Void {
         let alertController = UIAlertController(title: title, message:
             subTitle, preferredStyle: UIAlertControllerStyle.alert)

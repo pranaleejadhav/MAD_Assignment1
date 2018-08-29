@@ -16,8 +16,9 @@ class CustomlaunchscreenController: UIViewController{
         super.viewDidLoad()
         
         let mainQueue = DispatchQueue.main
-        let deadline = DispatchTime.now() + .seconds(3)
+        let deadline = DispatchTime.now() + .seconds(2)
         mainQueue.asyncAfter(deadline: deadline) {
+            //post notification after 2 seconds
              NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
         }
     }

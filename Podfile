@@ -17,4 +17,5 @@ target 'MAD_Assignment1' do
     # Pods for testing
   end
  pod 'IHKeyboardAvoiding'
+ pod 'Alamofire', '~> 4.7'
 end

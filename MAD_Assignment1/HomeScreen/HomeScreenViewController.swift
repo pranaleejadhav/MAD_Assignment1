@@ -15,9 +15,8 @@ class HomeScreenViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //hide navigation bar
         self.navigationController?.navigationBar.isHidden = true
-        //UserDefaults.standard.set("Anand", forKey: "username")
-        
         
     }
     
@@ -27,6 +26,9 @@ class HomeScreenViewController: UIViewController{
     }
    
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        
+        // set welcome message
         let uname = UserDefaults.standard.string(forKey: "username")
         welcome_lb.text = "Welcome " + uname!
     }
@@ -39,11 +41,13 @@ class HomeScreenViewController: UIViewController{
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
         
+        //redirect to profile page
         let newViewController: ViewProfileController = storyboard.instantiateViewController(withIdentifier: "ViewProfileController") as! ViewProfileController
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
     
     @IBAction func logout(_ sender: Any) {
+        //clear userdefaults to logout user
         UserDefaults.standard.removeObject(forKey: "userid")
         UserDefaults.standard.removeObject(forKey: "username")
         NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
