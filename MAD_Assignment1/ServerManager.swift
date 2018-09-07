@@ -25,19 +25,7 @@ func post_request(url: String, parameters: Parameters) -> Int {
         // do some tasks..
     
         
-        let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/" + url
-        Alamofire.request(server_url, method: .post, parameters: parameters,encoding:
-            JSONEncoding.default, headers: nil).responseJSON {
-                response in
-                switch response.result {
-                case .success:
-                    print(response)
-                    break
-                    
-                case .failure(let error):
-                    print(error)
-                }
-        }
+       
        
       /*  let headers = ["Content-Type": "application/x-www-form-urlencoded"]
         let completeURL = "http://the_complete_url_here"
@@ -52,7 +40,21 @@ func post_request(url: String, parameters: Parameters) -> Int {
                 print(response.result.error!)
             }
         }
-        
+        */
+         let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/" + url
+         Alamofire.request(server_url, method: .post, parameters: parameters,encoding:
+         JSONEncoding.default, headers: nil).responseJSON {
+         response in
+         switch response.result {
+         case .success:
+         print(response)
+         break
+         
+         case .failure(let error):
+         print(error)
+         }
+         }
+        /*
         Alamofire.request(server_url,method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: [:]).responseJSON { (response:DataResponse<Any>) in
             print(response.result)
             switch(response.result) {

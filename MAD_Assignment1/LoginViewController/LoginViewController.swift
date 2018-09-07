@@ -65,13 +65,14 @@ class LoginViewController: UIViewController{
             showMsg(title: "", subTitle: "Please enter password")
             }
         else{
+//
             UserDefaults.standard.set(uname, forKey: "username")
             UserDefaults.standard.set("Anand", forKey: "userid")
             NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
-
+            
             let str:String="user"+"gmail.com"
             let params = ["name": uname, "password": pwd, "email":str]
-
+            
             let result : Int = post_request(url: "login", parameters: params)
             print(result)
             switch result {
