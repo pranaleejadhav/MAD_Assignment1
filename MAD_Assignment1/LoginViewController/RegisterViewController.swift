@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import IHKeyboardAvoiding
-
+import SVProgressHUD
 
 
 
@@ -62,7 +62,7 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
             showMsg(title: "", subTitle: "Passwords do not match")
         } else if ((age.isEmpty) == true) {
             showMsg(title: "", subTitle: "Please enter age")
-        } else if (Int(age)! > 17) {
+        } else if ((Int(age)!) < 17) {
             showMsg(title: "Oops!", subTitle: "Age must be atleast 18 years")
         } else if ((weight.isEmpty) == true) {
             showMsg(title: "", subTitle: "Please enter weight")
@@ -70,10 +70,40 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
             showMsg(title: "", subTitle: "Please enter address")
         }
         else{
-            UserDefaults.standard.set(uname, forKey: "username")
+            
+            let str:String=uname+"@gmail.com"
+            let params = ["name": uname, "password": pwd, "email":str,"age":age,"weight":weight,"address":address]
+            SVProgressHUD.show()
+            post_registerrequest(parameters: params, handler: {(data) in
+                 SVProgressHUD.dismiss()
+                //print(data)
+                switch(data){
+                case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
+                    break
+                case 2:
+                    UserDefaults.standard.set(uname, forKey: "username")
+                    DispatchQueue.main.async(execute: {
+                        
+                        NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
+                        
+                        
+                    })
+                    break
+                case 3:self.showMsg(title: "Error", subTitle: "Incorrect credentials")
+                    break
+                default:
+                    self.showMsg(title: "Error", subTitle: "Please try again")
+                    
+                }
+            }
+                
+            )
+            
+            
+           /* UserDefaults.standard.set(uname, forKey: "username")
             UserDefaults.standard.set("Anand", forKey: "userid")
             NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
-            
+            */
             
         }
         

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import IHKeyboardAvoiding
 
+import SVProgressHUD
 
 extension UITextField
 {
@@ -66,27 +67,41 @@ class LoginViewController: UIViewController{
             }
         else{
 //
-            UserDefaults.standard.set(uname, forKey: "username")
-            UserDefaults.standard.set("Anand", forKey: "userid")
-            NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
+           // UserDefaults.standard.set(uname, forKey: "username")
+            //UserDefaults.standard.set("Anand", forKey: "userid")
+            //NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
             
-            let str:String="user"+"gmail.com"
+            let str:String=uname+"@gmail.com"
             let params = ["name": uname, "password": pwd, "email":str]
             
-            let result : Int = post_request(url: "login", parameters: params)
-            print(result)
-            switch result {
-            case 0: showMsg(title: "Oops!", subTitle: "No Internet")
-              break
-            case 2:
-                UserDefaults.standard.set(uname, forKey: "username")
-                UserDefaults.standard.set("Anand", forKey: "userid")
-                NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
-
+            SVProgressHUD.show()
+            post_loginrequest(parameters: params, handler: {(data) in
+                
+                    print(data)
+                SVProgressHUD.dismiss()
+                    switch(data){
+                case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
                 break
-            default:
-                showMsg(title: "Error", subTitle: "Please try again")
+                case 2:
+                    UserDefaults.standard.set(uname, forKey: "username")
+                    DispatchQueue.main.async(execute: {
+                
+                NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
+                       
+                        
+                    })
+                break
+                case 3:self.showMsg(title: "Error", subTitle: "Incorrect credentials")
+                    break
+                default:
+                    self.showMsg(title: "Error", subTitle: "Please try again")
+               
+                }
             }
+                
+            )
+            
+          
            
          
         }

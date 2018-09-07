@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 
 class HomeScreenViewController: UIViewController{
     
@@ -48,9 +49,40 @@ class HomeScreenViewController: UIViewController{
     
     @IBAction func logout(_ sender: Any) {
         //clear userdefaults to logout user
-        UserDefaults.standard.removeObject(forKey: "userid")
-        UserDefaults.standard.removeObject(forKey: "username")
-        NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
         
+        SVProgressHUD.show()
+        post_logoutrequest(parameters: ["token":UserDefaults.standard.string(forKey: "token")!], handler: {
+            data in
+             SVProgressHUD.dismiss()
+            switch(data){
+            case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
+                break
+            case 2:
+                UserDefaults.standard.removeObject(forKey: "token")
+                UserDefaults.standard.removeObject(forKey: "username")
+                DispatchQueue.main.async(execute: {
+                    
+                    NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
+                    
+                })
+                break
+            case 3:self.showMsg(title: "Error", subTitle: "Please try again")
+                break
+            default:
+                self.showMsg(title: "Error", subTitle: "Please try again")
+                
+            }
+            
+           
+            
+        })
+    }
+    
+    func showMsg(title: String, subTitle: String) -> Void {
+        let alertController = UIAlertController(title: title, message:
+            subTitle, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }

@@ -16,67 +16,196 @@ class Connectivity {
 }
 
 
-func post_request(url: String, parameters: Parameters) -> Int {
+func post_registerrequest(parameters: Parameters, handler:@escaping (Int) -> Void) -> Void {
+    if Connectivity.isConnectedToInternet {
+        
+        
+        let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register"
+        
+        Alamofire.request(server_url, method: .post, parameters: parameters,encoding:
+            JSONEncoding.default, headers: nil).responseJSON { (response:DataResponse<Any>) in
+                
+                switch response.result {
+                case .success(let value):
+                    print("response")
+                    print(value)
+                    if let dict = value as? Dictionary<String, Any>{
+                        print(dict)
+                        if let val = dict["token"]{
+                            print(val)
+                            UserDefaults.standard.set(val, forKey: "token")
+                            handler(2)
+                        } else {
+                            
+                            handler(3)
+                        }
+                        
+                    }
+                    
+                    
+                    break
+                    
+                case .failure(let error):
+                    print(error)
+                    handler(1)
+                    
+                }
+        }
+        
+        
+    }
+    else {
+        handler(0)
+    }
+}
+
+
+func post_loginrequest(parameters: Parameters, handler:@escaping (Int) -> Void) -> Void {
    
-    var result: Int = 0
+   
     
     if Connectivity.isConnectedToInternet {
-        print("Yes! internet is available.")
-        // do some tasks..
-    
+      
+       
+         let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/login"
         
-       
-       
-      /*  let headers = ["Content-Type": "application/x-www-form-urlencoded"]
-        let completeURL = "http://the_complete_url_here"
-        Alamofire.request(server_url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response:DataResponse<Any>)  in
-            print("ghjgj")
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)") // your JSONResponse result
-                //completionHandler(JSON as! NSDictionary)
-            }
-            else {
-                print(response.result.error!)
-            }
-        }
-        */
-         let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/" + url
          Alamofire.request(server_url, method: .post, parameters: parameters,encoding:
-         JSONEncoding.default, headers: nil).responseJSON {
-         response in
+         JSONEncoding.default, headers: nil).responseJSON { (response:DataResponse<Any>) in
+        
          switch response.result {
-         case .success:
-         print(response)
+         case .success(let value):
+            print("response")
+            if let dict = value as? Dictionary<String, String>{
+                //print(dict["token"]!)
+                if let val = dict["token"]{
+                    print(val)
+                    UserDefaults.standard.set(val, forKey: "token")
+                    handler(2)
+                } else {
+                    
+                    handler(3)
+                }
+                
+            }
+            
+           
          break
          
          case .failure(let error):
          print(error)
+             handler(1)
+            
          }
          }
-        /*
-        Alamofire.request(server_url,method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: [:]).responseJSON { (response:DataResponse<Any>) in
-            print(response.result)
-            switch(response.result) {
-            case .success(_):
-                if response.result.value != nil{
-                    print("response : \(String(describing: response.result.value))")
-                }
-                result = 2
-                break
-                
-            case .failure(_):
-                print("Failure : \(String(describing: response.result.error))")
-                result = 1
-                break
-                
-            }
-        }
-*/
-
+       
         
 }
-    return result
+    else {
+        handler(0)
+    }
+}
+
+
+func post_updateprofilerequest(parameters: Parameters, handler:@escaping (Int) -> Void) -> Void {
+    if Connectivity.isConnectedToInternet {
+        let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/updatedata"
+        
+        Alamofire.request(server_url, method: .post, parameters: parameters,encoding:
+            JSONEncoding.default, headers: nil).responseJSON { (response:DataResponse<Any>) in
+                print(response)
+                switch response.result {
+                case .success(let value):
+                    if let dict = value as? Dictionary<String, Any>{
+                        //print(dict["token"]!)
+                        if let val = dict["success"] as? Bool{
+                            if(val){
+                                handler(2)
+                            } else {
+                                handler(3)
+                            }
+                        }
+                        
+                    }
+                    break
+                    
+                case .failure(let error):
+                    print(error)
+                    handler(1)
+                }
+        }
+    }else {
+        handler(0)
+    }
+}
+
+
+func post_showprofilerequest(parameters: Parameters, handler:@escaping (Dictionary<String, Any>) -> Void) -> Void {
+    if Connectivity.isConnectedToInternet {
+        let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/user?token="+UserDefaults.standard.string(forKey: "token")!
+        
+        Alamofire.request(server_url).responseJSON { (response:DataResponse<Any>) in
+                print(response)
+                switch response.result {
+                case .success(let value):
+                    if let val = value as? Dictionary<String, Any> {
+                       
+                    if let dict = val["user"] as? Dictionary<String, Any>{
+                        handler(dict)
+                    } else {
+                        handler(["code":1])
+                    }
+                    }else {
+                        handler(["code":1])
+                    }
+                    break
+                    
+                case .failure(let error):
+                    print(error)
+                    handler(["code":1])
+                }
+        }
+    }else {
+        handler(["code":"0"])
+    }
+}
+
+func post_logoutrequest(parameters: Parameters, handler:@escaping (Int) -> Void) -> Void {
+    
+    
+    
+    if Connectivity.isConnectedToInternet {
+        
+        
+        let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/logout?token="+UserDefaults.standard.string(forKey: "token")!
+        Alamofire.request(server_url)
+            .responseJSON { response in
+                print(response)
+                switch response.result {
+                case .success(let value):
+                    print("response")
+                    if let dict = value as? Dictionary<String, Any>{
+                        //print(dict["token"]!)
+                        if let val = dict["success"] as? Bool{
+                            if(val){
+                                handler(2)
+                            } else {
+                                handler(3)
+                            }
+                        }
+                        
+                    }
+                    
+                    
+                    break
+                    
+                case .failure(let error):
+                    print(error)
+                    handler(1)
+                    
+                }
+        }
+        
+    }
 }
 
 

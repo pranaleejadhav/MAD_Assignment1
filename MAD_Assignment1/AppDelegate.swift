@@ -106,7 +106,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //UserDefaults.standard.removeObject(forKey: "userid")
         //UserDefaults.standard.set("Anand", forKey: "userid")
-        let userid = UserDefaults.standard.string(forKey: "userid")
+        //UserDefaults.standard.removeObject(forKey: "token")
+       // UserDefaults.standard.removeObject(forKey: "username")
+        let userid = UserDefaults.standard.string(forKey: "token")
         //check user is logged in or not
         if userid != nil {
             //user is logged in, redirect to home page

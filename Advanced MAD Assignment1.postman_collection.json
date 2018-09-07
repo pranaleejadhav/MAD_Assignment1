@@ -1,105 +1,243 @@
 {
-	"info": {
-		"_postman_id": "4c803341-2fd0-44e0-a8aa-af0c07eceb92",
-		"name": "Advanced MAD Assignment1",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
+	"id": "4c803341-2fd0-44e0-a8aa-af0c07eceb92",
+	"name": "Advanced MAD Assignment1",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"1a67075a-f633-49f0-9658-3f0b72d16250",
+		"d7f4004d-0e97-41c6-a5e4-267745ae1788",
+		"35d28507-5793-46f7-9bd6-1443eb236211",
+		"a0a2f24c-95c3-46eb-9f82-3676eb711958",
+		"ed07ed73-e9bc-41c9-83b6-a7a2671c51a1"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
 		{
+			"id": "1a67075a-f633-49f0-9658-3f0b72d16250",
 			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "name",
-							"value": "pranalee",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "email",
-							"value": "user@gmail.com",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "12345",
-							"description": "",
-							"type": "text"
-						}
-					]
+			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
+			"description": "",
+			"data": [
+				{
+					"key": "name",
+					"value": "pranalee",
+					"description": "",
+					"type": "text",
+					"enabled": true
 				},
-				"url": {
-					"raw": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/login",
-					"protocol": "http",
-					"host": [
-						"laravel-jwt",
-						"us-east-2",
-						"elasticbeanstalk",
-						"com"
-					],
-					"path": [
-						"api",
-						"login"
-					]
+				{
+					"key": "email",
+					"value": "pranalee@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "12345",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "age",
+					"value": "26",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "weight",
+					"value": "55",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "address",
+					"value": "charlotte",
+					"description": "",
+					"type": "text",
+					"enabled": true
 				}
-			},
-			"response": []
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
 		},
 		{
-			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "name",
-							"value": "abcd",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "email",
-							"value": "abcd@gjhgj.com",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "123456",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "password_confirmation",
-							"value": "123456",
-							"description": "",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
-					"protocol": "http",
-					"host": [
-						"laravel-jwt",
-						"us-east-2",
-						"elasticbeanstalk",
-						"com"
-					],
-					"path": [
-						"api",
-						"register"
-					]
+			"id": "35d28507-5793-46f7-9bd6-1443eb236211",
+			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/logout?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE1MzYzMDY0OTAsImV4cCI6MTUzNjMxMDA5MCwibmJmIjoxNTM2MzA2NDkwLCJqdGkiOiJ2cXZGTHVvSFVxTEtZeU9UIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.4mTbUR1uDnLyi7dHmN04FSuz-hxJwl4Vho8SDxYI3-o",
+			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/logout?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE1MzYzMDY0OTAsImV4cCI6MTUzNjMxMDA5MCwibmJmIjoxNTM2MzA2NDkwLCJqdGkiOiJ2cXZGTHVvSFVxTEtZeU9UIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.4mTbUR1uDnLyi7dHmN04FSuz-hxJwl4Vho8SDxYI3-o",
+			"description": "Logout User",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE1MzYzMDY0OTAsImV4cCI6MTUzNjMxMDA5MCwibmJmIjoxNTM2MzA2NDkwLCJqdGkiOiJ2cXZGTHVvSFVxTEtZeU9UIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.4mTbUR1uDnLyi7dHmN04FSuz-hxJwl4Vho8SDxYI3-o",
+					"equals": true,
+					"description": "",
+					"enabled": true
 				}
-			},
-			"response": []
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a0a2f24c-95c3-46eb-9f82-3676eb711958",
+			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/updatedata",
+			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/updatedata",
+			"description": "Update User profile data",
+			"data": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvcmVnaXN0ZXIiLCJpYXQiOjE1MzYzMDgxNTAsImV4cCI6MTUzNjMxMTc1MCwibmJmIjoxNTM2MzA4MTUwLCJqdGkiOiJTN2NzaEdGMmRHbDNxSW5LIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.YIeANlkDeSseNLtt9rmqxosBPkslFvX_CWiiwkyQPHM",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "pranalee",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "pranalee@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "age",
+					"value": "25",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "weight",
+					"value": "50",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d7f4004d-0e97-41c6-a5e4-267745ae1788",
+			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
+			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
+			"description": "Login",
+			"data": [
+				{
+					"key": "name",
+					"value": "abcd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "abcd@gjhgj.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password_confirmation",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "ed07ed73-e9bc-41c9-83b6-a7a2671c51a1",
+			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvcmVnaXN0ZXIiLCJpYXQiOjE1MzYzMDgxNTAsImV4cCI6MTUzNjMxMTc1MCwibmJmIjoxNTM2MzA4MTUwLCJqdGkiOiJTN2NzaEdGMmRHbDNxSW5LIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.YIeANlkDeSseNLtt9rmqxosBPkslFvX_CWiiwkyQPHM",
+			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvcmVnaXN0ZXIiLCJpYXQiOjE1MzYzMDgxNTAsImV4cCI6MTUzNjMxMTc1MCwibmJmIjoxNTM2MzA4MTUwLCJqdGkiOiJTN2NzaEdGMmRHbDNxSW5LIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.YIeANlkDeSseNLtt9rmqxosBPkslFvX_CWiiwkyQPHM",
+			"description": "Get Profile data",
+			"data": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE1MzYzMDM1MjksImV4cCI6MTUzNjMwNzEyOSwibmJmIjoxNTM2MzAzNTI5LCJqdGkiOiJIdXBsbGFvTU1TejVEU3AwIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.LBrj-xnB7tMmOGZG0OiKFBoZu8iAj4U8z0SEqOvL0H4",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvcmVnaXN0ZXIiLCJpYXQiOjE1MzYzMDgxNTAsImV4cCI6MTUzNjMxMTc1MCwibmJmIjoxNTM2MzA4MTUwLCJqdGkiOiJTN2NzaEdGMmRHbDNxSW5LIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.YIeANlkDeSseNLtt9rmqxosBPkslFvX_CWiiwkyQPHM",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
 		}
 	]
 }

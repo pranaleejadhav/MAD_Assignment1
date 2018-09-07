@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import IHKeyboardAvoiding
+import SVProgressHUD
 
 class ViewProfileController: UIViewController,UITextViewDelegate {
     
@@ -34,6 +35,36 @@ class ViewProfileController: UIViewController,UITextViewDelegate {
         address.layer.borderColor = UIColor.lightGray.cgColor
         address.layer.borderWidth = 1.0
         address.layer.cornerRadius = 5
+        
+        show_profile()
+        
+    }
+    
+    func show_profile() -> Void {
+        print("insideeeeee")
+        SVProgressHUD.show()
+        post_showprofilerequest(parameters:["token":UserDefaults.standard.string(forKey: "token")!], handler: {
+            data in
+            SVProgressHUD.dismiss()
+            print(data)
+            if let val = data["code"] as? Int{
+                switch(val){
+                case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
+                    break
+                
+                default:
+                    self.showMsg(title: "Error", subTitle: "Please try again")
+                    
+                    
+                }
+            } else{
+                self.uname.text = data["name"] as? String
+            self.age.text = data["age"] as? String
+            self.weight.text = data["weight"] as? String
+            self.address.text = data["address"] as? String
+           
+            }
+            })
     }
     
     
@@ -58,10 +89,39 @@ class ViewProfileController: UIViewController,UITextViewDelegate {
             showMsg(title: "", subTitle: "Please enter address")
         }
         else{
-            UserDefaults.standard.set(uname, forKey: "username")
-            //UserDefaults.standard.set("Anand", forKey: "userid")
-            //NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
-            showMsg(title: "Profile Updated", subTitle: "")
+           
+            let str:String=uname+"@gmail.com"
+            let params = ["name": uname, "email":str,"age":age,"weight":weight,"address":address,"token":UserDefaults.standard.string(forKey: "token")!]
+            
+             SVProgressHUD.show()
+            post_updateprofilerequest(parameters: params, handler: {(data) in
+                
+                print(data)
+                SVProgressHUD.dismiss()
+                switch(data){
+                case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
+                    break
+                case 2:
+                    UserDefaults.standard.set(uname, forKey: "username")
+                    DispatchQueue.main.async(execute: {
+                        
+                        
+                        self.showMsg(title: "Profile Updated", subTitle: "")
+                        
+                        
+                    })
+                    break
+                case 3:self.showMsg(title: "Error", subTitle: "Please try again")
+                    break
+                default:
+                    self.showMsg(title: "Error", subTitle: "Please try again")
+                    
+                }
+            }
+                
+            )
+            
+            
             
         }
     }

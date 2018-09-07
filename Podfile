@@ -18,4 +18,5 @@ target 'MAD_Assignment1' do
   end
  pod 'IHKeyboardAvoiding'
  pod 'Alamofire', '~> 4.7'
+ pod 'SVProgressHUD'
 end
