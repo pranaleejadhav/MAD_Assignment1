@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "4c803341-2fd0-44e0-a8aa-af0c07eceb92",
+		"name": "Advanced MAD Assignment1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "pranalee",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/login",
+					"protocol": "http",
+					"host": [
+						"laravel-jwt",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abcd",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abcd@gjhgj.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
+					"protocol": "http",
+					"host": [
+						"laravel-jwt",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
