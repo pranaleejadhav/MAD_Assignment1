@@ -69,10 +69,11 @@ class LoginViewController: UIViewController{
             UserDefaults.standard.set("Anand", forKey: "userid")
             NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
 
-            /*let params = ["username": uname, "pwd": pwd]
+            let str:String="user"+"gmail.com"
+            let params = ["name": uname, "password": pwd, "email":str]
 
             let result : Int = post_request(url: "login", parameters: params)
-            
+            print(result)
             switch result {
             case 0: showMsg(title: "Oops!", subTitle: "No Internet")
               break
@@ -86,7 +87,7 @@ class LoginViewController: UIViewController{
                 showMsg(title: "Error", subTitle: "Please try again")
             }
            
-         */
+         
         }
 
         
