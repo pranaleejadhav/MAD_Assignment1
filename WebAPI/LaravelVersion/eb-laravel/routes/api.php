@@ -21,8 +21,12 @@ Route::post('register', 'UserController@register');
     Route::get('open', 'DataController@open');
     Route::get('checkdb', 'UserController@checkdb');
     Route::get('checktable', 'UserController@checktable');
+   
 
     Route::group(['middleware' => ['jwt.verify']], function() {
+    	 
+    Route::post('updatedata', 'UserController@updatedata');
+    	Route::get('logout', 'UserController@logout');
         Route::get('user', 'UserController@getAuthenticatedUser');
         Route::get('closed', 'DataController@closed');
     });
