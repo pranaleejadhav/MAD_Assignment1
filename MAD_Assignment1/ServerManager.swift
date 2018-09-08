@@ -30,16 +30,18 @@ func post_registerrequest(parameters: Parameters, handler:@escaping (Int) -> Voi
                     print("response")
                     print(value)
                     if let dict = value as? Dictionary<String, Any>{
-                        print(dict)
+                       
                         if let val = dict["token"]{
-                            print(val)
+                            
                             UserDefaults.standard.set(val, forKey: "token")
                             handler(2)
                         } else {
-                            
+                           
                             handler(3)
                         }
                         
+                    } else {
+                        handler(3)
                     }
                     
                     

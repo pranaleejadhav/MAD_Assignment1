@@ -76,7 +76,7 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
             SVProgressHUD.show()
             post_registerrequest(parameters: params, handler: {(data) in
                  SVProgressHUD.dismiss()
-                //print(data)
+                print(data)
                 switch(data){
                 case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
                     break
@@ -89,7 +89,7 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
                         
                     })
                     break
-                case 3:self.showMsg(title: "Error", subTitle: "Incorrect credentials")
+                case 3:self.showMsg(title: "Oops!", subTitle: "User already exists")
                     break
                 default:
                     self.showMsg(title: "Error", subTitle: "Please try again")
@@ -112,11 +112,14 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
     
     //show alert box
     func showMsg(title: String, subTitle: String) -> Void {
+        DispatchQueue.main.async(execute: {
+            
         let alertController = UIAlertController(title: title, message:
             subTitle, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
         
         self.present(alertController, animated: true, completion: nil)
+        })
     }
    
     //Dismiss view controller
