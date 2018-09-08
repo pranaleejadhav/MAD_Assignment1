@@ -1,7 +1,5 @@
-ADVANCED MAD ASSIGNMENT 1
-
 **Objective:** 
-- To create a simple authentication API for mobile application using Laravel PHP and Mysql. 
+- To create a simple authentication API for mobile application. 
 - To use Amazon Web Services for deployment of web API.
 - To build an iOS mobile application which will demonstrate 'login', 'register', 'show/edit profile'.
 
@@ -15,13 +13,13 @@ Narahari Battala
 
 **Web API**
 ***
-Code is available in [Link](https://github.com/lee0392/MAD_Assignment1/tree/backend/WebAPI/InClass1)
+Code is available in [Link](https://github.com/lee0392/MAD_Assignment1/tree/master/WebAPI/LaravelVersion/eb-laravel)
 
 Our API is used for sign up , login and data retrieval.It is intended primarily to assist application developers wishing to use an api for sign up , login and data retrieval operations in their applications or websites.
 
 What's available:
 
-This api provides 3 kinds of operations: **SignUp** which is used for account registration, **Login** which is used for login in to the account and **Data Retrieval** for retrieving the account specific details.
+This api provides 5 kinds of operations: **SignUp** which is used for account registration, **Login** which is used for login in to the account, **Data Retrieval** for retrieving the account specific details, **Update Data** for updating user's profile data and **Log out** to log user out.
 
 **Technology used: Laravel PHP**
 
@@ -111,7 +109,7 @@ CREATE TABLE `user` (.
   `age` int(11) DEFAULT NULL,  
   `weight` varchar(10) DEFAULT NULL,  
   `address` varchar(100) DEFAULT NULL,
-  `passw` varchar(500) DEFAULT NULL,
+  `password` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci. 
 /*!40101 SET character_set_client = @saved_cs_client */. 
@@ -140,7 +138,7 @@ UNLOCK TABLES.
 **Mobile App:**
 ***
 
-Code is available in [Link](https://github.com/lee0392/MAD_Assignment1/tree/backend) 
+Code is available in [Link](https://github.com/lee0392/MAD_Assignment1) 
 
 Technology used: Swift version 4
 
