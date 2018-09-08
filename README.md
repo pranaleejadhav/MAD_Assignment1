@@ -13,6 +13,34 @@ Gautham Bekal
 
 Narahari Battala
 
+**Important Links:**
+
+Mobile App Screencast : [Link](https://github.com/lee0392/MAD_Assignment1/blob/master/Screencast/mobileapp_screencast.mov)
+
+Web Api code : [Link](https://github.com/lee0392/MAD_Assignment1/tree/master/WebAPI/LaravelVersion/eb-laravel)
+
+Mobile App code : [Link](https://github.com/lee0392/MAD_Assignment1) 
+
+**Screenshots:**
+
+### Login page
+
+[[images/Simulator Screen Shot - iPhone 8 Plus - 2018-08-29 at 11.01.54.png]]
+
+### Registration page
+
+[[images/Simulator Screen Shot - iPhone 8 Plus - 2018-08-29 at 11.09.08.png]]
+
+### Home Page
+
+[[images/Simulator Screen Shot - iPhone 8 Plus - 2018-08-29 at 11.34.47.png]]
+
+### Profile Page
+
+[[images/Simulator Screen Shot - iPhone 8 Plus - 2018-08-29 at 11.35.03.png]]
+
+
+
 **Web API**
 ***
 Code is available in [Link](https://github.com/lee0392/MAD_Assignment1/tree/master/WebAPI/LaravelVersion/eb-laravel)
