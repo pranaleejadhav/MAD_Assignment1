@@ -17,7 +17,7 @@
 	"requests": [
 		{
 			"id": "1a67075a-f633-49f0-9658-3f0b72d16250",
-			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/login",
+			"name": "Register",
 			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
 			"description": "",
 			"data": [
@@ -77,7 +77,7 @@
 		},
 		{
 			"id": "35d28507-5793-46f7-9bd6-1443eb236211",
-			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/logout?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE1MzYzMDY0OTAsImV4cCI6MTUzNjMxMDA5MCwibmJmIjoxNTM2MzA2NDkwLCJqdGkiOiJ2cXZGTHVvSFVxTEtZeU9UIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.4mTbUR1uDnLyi7dHmN04FSuz-hxJwl4Vho8SDxYI3-o",
+			"name": "Logout",
 			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/logout?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE1MzYzMDY0OTAsImV4cCI6MTUzNjMxMDA5MCwibmJmIjoxNTM2MzA2NDkwLCJqdGkiOiJ2cXZGTHVvSFVxTEtZeU9UIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.4mTbUR1uDnLyi7dHmN04FSuz-hxJwl4Vho8SDxYI3-o",
 			"description": "Logout User",
 			"data": null,
@@ -102,7 +102,7 @@
 		},
 		{
 			"id": "a0a2f24c-95c3-46eb-9f82-3676eb711958",
-			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/updatedata",
+			"name": "Update",
 			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/updatedata",
 			"description": "Update User profile data",
 			"data": [
@@ -162,7 +162,7 @@
 		},
 		{
 			"id": "d7f4004d-0e97-41c6-a5e4-267745ae1788",
-			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
+			"name": "Login",
 			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register",
 			"description": "Login",
 			"data": [
@@ -208,7 +208,7 @@
 		},
 		{
 			"id": "ed07ed73-e9bc-41c9-83b6-a7a2671c51a1",
-			"name": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvcmVnaXN0ZXIiLCJpYXQiOjE1MzYzMDgxNTAsImV4cCI6MTUzNjMxMTc1MCwibmJmIjoxNTM2MzA4MTUwLCJqdGkiOiJTN2NzaEdGMmRHbDNxSW5LIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.YIeANlkDeSseNLtt9rmqxosBPkslFvX_CWiiwkyQPHM",
+			"name": "Get User data",
 			"url": "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhdmVsLWp3dC51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb21cL2FwaVwvcmVnaXN0ZXIiLCJpYXQiOjE1MzYzMDgxNTAsImV4cCI6MTUzNjMxMTc1MCwibmJmIjoxNTM2MzA4MTUwLCJqdGkiOiJTN2NzaEdGMmRHbDNxSW5LIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.YIeANlkDeSseNLtt9rmqxosBPkslFvX_CWiiwkyQPHM",
 			"description": "Get Profile data",
 			"data": [
