@@ -14,7 +14,7 @@ import SVProgressHUD
 
 
 class RegisterViewController: UIViewController,UITextViewDelegate{
-    
+    //create reference to storyboard views
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var pwd: UITextField!
@@ -70,23 +70,21 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
             showMsg(title: "", subTitle: "Please enter address")
         }
         else{
-            
+            //pass parameters to register api
             let str:String=uname+"@gmail.com"
             let params = ["name": uname, "password": pwd, "email":str,"age":age,"weight":weight,"address":address]
             SVProgressHUD.show()
             post_registerrequest(parameters: params, handler: {(data) in
-                 SVProgressHUD.dismiss()
-                print(data)
+                SVProgressHUD.dismiss()
                 switch(data){
                 case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
-                    break
+                break
                 case 2:
                     UserDefaults.standard.set(uname, forKey: "username")
                     DispatchQueue.main.async(execute: {
                         
                         NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
-                        
-                        
+ 
                     })
                     break
                 case 3:self.showMsg(title: "Oops!", subTitle: "User already exists")
@@ -99,12 +97,6 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
                 
             )
             
-            
-           /* UserDefaults.standard.set(uname, forKey: "username")
-            UserDefaults.standard.set("Anand", forKey: "userid")
-            NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
-            */
-            
         }
         
         
@@ -113,12 +105,10 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
     //show alert box
     func showMsg(title: String, subTitle: String) -> Void {
         DispatchQueue.main.async(execute: {
-            
-        let alertController = UIAlertController(title: title, message:
+            let alertController = UIAlertController(title: title, message:
             subTitle, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
-        
-        self.present(alertController, animated: true, completion: nil)
+            alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         })
     }
    
@@ -135,7 +125,7 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
             textView.text = ""
             textView.textColor = .black
         }
-        textView.becomeFirstResponder() //Optional
+        textView.becomeFirstResponder()
     }
     
     func textViewDidEndEditing(_ textView: UITextView)
@@ -147,8 +137,5 @@ class RegisterViewController: UIViewController,UITextViewDelegate{
         }
         textView.resignFirstResponder()
     }
-    
-    
-    
-    
+
 }

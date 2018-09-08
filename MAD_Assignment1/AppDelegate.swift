@@ -104,10 +104,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             statusBar.backgroundColor = UIColor.init(red:0.14, green:0.32, blue:0.85, alpha:1)
         }
         
-        //UserDefaults.standard.removeObject(forKey: "userid")
-        //UserDefaults.standard.set("Anand", forKey: "userid")
-        //UserDefaults.standard.removeObject(forKey: "token")
-       // UserDefaults.standard.removeObject(forKey: "username")
         let userid = UserDefaults.standard.string(forKey: "token")
         //check user is logged in or not
         if userid != nil {

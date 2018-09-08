@@ -34,7 +34,6 @@ class LoginViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-        //tap.delegate = self // This is not required
         signup_link.addGestureRecognizer(tap)
         signup_link.isUserInteractionEnabled = true
         KeyboardAvoiding.avoidingView = self.avoidingView
@@ -66,56 +65,39 @@ class LoginViewController: UIViewController{
             showMsg(title: "", subTitle: "Please enter password")
             }
         else{
-//
-           // UserDefaults.standard.set(uname, forKey: "username")
-            //UserDefaults.standard.set("Anand", forKey: "userid")
-            //NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
-            
+            //pass parameters to server
             let str:String=uname+"@gmail.com"
             let params = ["name": uname, "password": pwd, "email":str]
-            
+            //show loader
             SVProgressHUD.show()
             post_loginrequest(parameters: params, handler: {(data) in
-                
-                    print(data)
+                //dismiss loader
                 SVProgressHUD.dismiss()
-                    switch(data){
-                case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
-                break
-                case 2:
-                    UserDefaults.standard.set(uname, forKey: "username")
-                    DispatchQueue.main.async(execute: {
-                
-                NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
-                       
-                        
-                    })
+                switch(data){
+                    case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
+                    break
+                    case 2:
+                        UserDefaults.standard.set(uname, forKey: "username")
+                        DispatchQueue.main.async(execute: {
+                            NotificationCenter.default.post(name: Notification.Name("com.mad.showhomescreen"), object: self, userInfo: nil)
+                       })
                 break
                 case 3:self.showMsg(title: "Error", subTitle: "Incorrect credentials")
-                    break
-                default:
-                    self.showMsg(title: "Error", subTitle: "Please try again")
-               
-                }
-            }
-                
-            )
-            
-          
-           
-         
-        }
-
-        
+                break
+                default:self.showMsg(title: "Error", subTitle: "Please try again")
+               }
+            })
+         }
     }
     
     //show alertbox
     func showMsg(title: String, subTitle: String) -> Void {
-        let alertController = UIAlertController(title: title, message:
+        DispatchQueue.main.async(execute: {
+            let alertController = UIAlertController(title: title, message:
             subTitle, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
-        
-        self.present(alertController, animated: true, completion: nil)
+            alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        })
     }
     
 }

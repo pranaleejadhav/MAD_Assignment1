@@ -9,17 +9,16 @@
 import Foundation
 import Alamofire
 
+//check internet connectivity
 class Connectivity {
     class var isConnectedToInternet:Bool {
         return NetworkReachabilityManager()!.isReachable
     }
 }
 
-
+//to call register api
 func post_registerrequest(parameters: Parameters, handler:@escaping (Int) -> Void) -> Void {
     if Connectivity.isConnectedToInternet {
-        
-        
         let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/register"
         
         Alamofire.request(server_url, method: .post, parameters: parameters,encoding:
@@ -61,15 +60,11 @@ func post_registerrequest(parameters: Parameters, handler:@escaping (Int) -> Voi
     }
 }
 
-
+//to call login api
 func post_loginrequest(parameters: Parameters, handler:@escaping (Int) -> Void) -> Void {
-   
-   
-    
-    if Connectivity.isConnectedToInternet {
+   if Connectivity.isConnectedToInternet {
       
-       
-         let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/login"
+       let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/login"
         
          Alamofire.request(server_url, method: .post, parameters: parameters,encoding:
          JSONEncoding.default, headers: nil).responseJSON { (response:DataResponse<Any>) in
@@ -107,7 +102,7 @@ func post_loginrequest(parameters: Parameters, handler:@escaping (Int) -> Void) 
     }
 }
 
-
+//to call update profile api
 func post_updateprofilerequest(parameters: Parameters, handler:@escaping (Int) -> Void) -> Void {
     if Connectivity.isConnectedToInternet {
         let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/updatedata"
@@ -140,7 +135,7 @@ func post_updateprofilerequest(parameters: Parameters, handler:@escaping (Int) -
     }
 }
 
-
+//to call get profiledata api
 func post_showprofilerequest(parameters: Parameters, handler:@escaping (Dictionary<String, Any>) -> Void) -> Void {
     if Connectivity.isConnectedToInternet {
         let server_url = "http://laravel-jwt.us-east-2.elasticbeanstalk.com/api/user?token="+UserDefaults.standard.string(forKey: "token")!
@@ -171,9 +166,8 @@ func post_showprofilerequest(parameters: Parameters, handler:@escaping (Dictiona
     }
 }
 
+//to call logout api
 func post_logoutrequest(parameters: Parameters, handler:@escaping (Int) -> Void) -> Void {
-    
-    
     
     if Connectivity.isConnectedToInternet {
         
@@ -186,7 +180,6 @@ func post_logoutrequest(parameters: Parameters, handler:@escaping (Int) -> Void)
                 case .success(let value):
                     print("response")
                     if let dict = value as? Dictionary<String, Any>{
-                        //print(dict["token"]!)
                         if let val = dict["success"] as? Bool{
                             if(val){
                                 handler(2)

@@ -12,13 +12,12 @@ import IHKeyboardAvoiding
 import SVProgressHUD
 
 class ViewProfileController: UIViewController,UITextViewDelegate {
-    
+    //create reference to storyboard views
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var uname: UITextField!
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var weight: UITextField!
     @IBOutlet weak var address: UITextView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +39,13 @@ class ViewProfileController: UIViewController,UITextViewDelegate {
         
     }
     
+    //fetch profile details from api
     func show_profile() -> Void {
-        print("insideeeeee")
+        
         SVProgressHUD.show()
         post_showprofilerequest(parameters:["token":UserDefaults.standard.string(forKey: "token")!], handler: {
             data in
             SVProgressHUD.dismiss()
-            print(data)
             if let val = data["code"] as? Int{
                 switch(val){
                 case 0: self.showMsg(title: "Oops!", subTitle: "No Internet")
@@ -55,16 +54,14 @@ class ViewProfileController: UIViewController,UITextViewDelegate {
                 default:
                     self.showMsg(title: "Error", subTitle: "Please try again")
                     
-                    
                 }
             } else{
                 self.uname.text = data["name"] as? String
-            self.age.text = data["age"] as? String
-            self.weight.text = data["weight"] as? String
-            self.address.text = data["address"] as? String
-           
+                self.age.text = data["age"] as? String
+                self.weight.text = data["weight"] as? String
+                self.address.text = data["address"] as? String
             }
-            })
+          })
     }
     
     
@@ -89,7 +86,7 @@ class ViewProfileController: UIViewController,UITextViewDelegate {
             showMsg(title: "", subTitle: "Please enter address")
         }
         else{
-           
+           //pass parameters to updateprofile api
             let str:String=uname+"@gmail.com"
             let params = ["name": uname, "email":str,"age":age,"weight":weight,"address":address,"token":UserDefaults.standard.string(forKey: "token")!]
             
@@ -128,11 +125,12 @@ class ViewProfileController: UIViewController,UITextViewDelegate {
     
     //show alertbox
     func showMsg(title: String, subTitle: String) -> Void {
-        let alertController = UIAlertController(title: title, message:
+        DispatchQueue.main.async(execute: {
+            let alertController = UIAlertController(title: title, message:
             subTitle, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
-        
-        self.present(alertController, animated: true, completion: nil)
+            alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        })
     }
     
      /**to perform operations when focus is on and out of textview **/
