@@ -21,6 +21,7 @@ Web Api code : [Link](https://github.com/lee0392/MAD_Assignment1/tree/master/Web
 
 Mobile App code : [Link](https://github.com/lee0392/MAD_Assignment1) 
 
+Postman Collection :[Link](https://github.com/lee0392/MAD_Assignment1/blob/master/Advanced%20MAD%20Assignment1.postman_collection.json)
 
 **Web API**
 ***
