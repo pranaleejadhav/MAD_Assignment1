@@ -1,8 +1,8 @@
-# MAD_Assignment1
-
+**ADVANCED MAD ASSIGNMENT 1**
 
 **Objective:** 
 - To create a simple authentication API for mobile application. 
+- To use Amazon Web Services for deployment of web API.
 - To build an iOS mobile application which will demonstrate 'login', 'register', 'show/edit profile'.
 
 **Team Members:** 
@@ -15,27 +15,28 @@ Narahari Battala
 
 **Web API**
 ***
-
+Code is available in [Link](https://github.com/lee0392/MAD_Assignment1/tree/master/WebAPI/LaravelVersion/eb-laravel)
 
 Our API is used for sign up , login and data retrieval.It is intended primarily to assist application developers wishing to use an api for sign up , login and data retrieval operations in their applications or websites.
 
 What's available:
 
-This api provides 3 kinds of operations: **SignUp** which is used for account registration, **Login** which is used for login in to the account and **Data Retrieval** for retrieving the account specific details.
+This api provides 5 kinds of operations: **SignUp** which is used for account registration, **Login** which is used for login in to the account, **Data Retrieval** for retrieving the account specific details, **Update Data** for updating user's profile data and **Log out** to log user out.
+
+**Technology used: Laravel PHP**
 
 **Register a User**
 
-Post /users/sign-up.   
+Post /api/register.   
 Accept: application/json.  
 Content-Type: application/json.   
        
 {.  
-    "userId":"battala",      
-    "name":"narahari",    
-    "age":23,    
-    "weight":"75",   
-    "address":"9407 Kittansett Dr",    
-    "password":"123456".   
+    "name":"user1",  
+    "password":"123456"  
+    "age":20,    
+    "weight":"65",   
+    "address":"charlotte"   
 }.  
 
 RESPONSE: HTTP 201 (Created).  
@@ -47,8 +48,8 @@ Accept: application/json.
 Content-Type: application/json.   
        
 {.  
-    "userId":"battala",    
-    "password":"12345".   
+    "name":"user1",    
+    "password":"123456".   
 }    
 
 RESPONSE: HTTP 200 (Ok).  
@@ -56,24 +57,24 @@ Content : Security token.
 
 **Retrieve User Details.** 
 
-Get /users?id = username. 
+Get /user?token = <token_value>. 
 
 Response: HTTP 200.  
 Content: User Details.   
 
 **Update User Details.**   
 
-put /users.   
+put /api/updatedata.   
 Accept: application/json.  
 Content-Type: application/json.   
        
 {.  
-    "userId":"battala",      
-    "name":"narahari",    
-    "age":23,    
-    "weight":"75",   
-    "address":"9407 Kittansett Dr",    
-    "password":"123456".   
+    "token":<token_value>,      
+    "name":"user1",  
+    "password":"123456"  
+    "age":29,    
+    "weight":"55",   
+    "address":"california"    
 }.  
 
 RESPONSE: HTTP 200 (ok).  
@@ -110,7 +111,7 @@ CREATE TABLE `user` (.
   `age` int(11) DEFAULT NULL,  
   `weight` varchar(10) DEFAULT NULL,  
   `address` varchar(100) DEFAULT NULL,
-  `passw` varchar(500) DEFAULT NULL,
+  `password` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci. 
 /*!40101 SET character_set_client = @saved_cs_client */. 
@@ -139,6 +140,7 @@ UNLOCK TABLES.
 **Mobile App:**
 ***
 
+Code is available in [Link](https://github.com/lee0392/MAD_Assignment1) 
 
 Technology used: Swift version 4
 
