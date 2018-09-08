@@ -21,29 +21,9 @@ Web Api code : [Link](https://github.com/lee0392/MAD_Assignment1/tree/master/Web
 
 Mobile App code : [Link](https://github.com/lee0392/MAD_Assignment1) 
 
-**Screenshots:**
-
-### Login page
-
-[[images/Simulator Screen Shot - iPhone 8 Plus - 2018-08-29 at 11.01.54.png]]
-
-### Registration page
-
-[[images/Simulator Screen Shot - iPhone 8 Plus - 2018-08-29 at 11.09.08.png]]
-
-### Home Page
-
-[[images/Simulator Screen Shot - iPhone 8 Plus - 2018-08-29 at 11.34.47.png]]
-
-### Profile Page
-
-[[images/Simulator Screen Shot - iPhone 8 Plus - 2018-08-29 at 11.35.03.png]]
-
-
 
 **Web API**
 ***
-Code is available in [Link](https://github.com/lee0392/MAD_Assignment1/tree/master/WebAPI/LaravelVersion/eb-laravel)
 
 Our API is used for sign up , login and data retrieval.It is intended primarily to assist application developers wishing to use an api for sign up , login and data retrieval operations in their applications or websites.
 
